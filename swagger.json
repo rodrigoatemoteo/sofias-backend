@@ -1,0 +1,1051 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "HAR Imported API",
+    "contact": {}
+  },
+  "host": "sofias.herokuapp.com",
+  "basePath": "/api/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/course/course": {
+      "post": {
+        "description": "Course Store",
+        "summary": "CourseCourse_POST",
+        "operationId": "CourseCourse_POST",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Response"
+            },
+            "examples": {
+              "application/json": {
+                "status": 1,
+                "message": "Book add Success.",
+                "data": {
+                  "_id": "600444465b4c310015e53630",
+                  "title": "Trabalho em equipe",
+                  "activities": [
+                    {
+                      "link": "",
+                      "_id": "600444465b4c310015e53632",
+                      "type": "Leitura",
+                      "activity_name": "Aula 1 - O que é uma equipe?",
+                      "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+                    },
+                    {
+                      "link": "https://youtu.be/kcBtrZPIbRs",
+                      "_id": "600444465b4c310015e53631",
+                      "type": "Videoaula",
+                      "activity_name": "Aula 2 - Como lidar em equipe?",
+                      "description": "teste teste teste test"
+                    }
+                  ],
+                  "exercise": {
+                    "title": "Hora de Colocar em Pratica",
+                    "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+                    "exercises": [
+                      {
+                        "alternatives": [
+                          "Alternativa 1",
+                          "Alternativa 2"
+                        ],
+                        "_id": "600444465b4c310015e53633",
+                        "title": "Pergunta 1",
+                        "description": "DEscricao 1",
+                        "correct": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/course/courses": {
+      "get": {
+        "description": "Get Courses",
+        "summary": "CourseCourses_GET",
+        "operationId": "CourseCourses_GET",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Response1"
+            },
+            "examples": {
+              "application/json": {
+                "status": 1,
+                "message": "Operation success",
+                "data": [
+                  {
+                    "exercise": {
+                      "title": "Hora de Colocar em Pratica",
+                      "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+                      "exercises": [
+                        {
+                          "alternatives": [
+                            "Alternativa 1",
+                            "Alternativa 2"
+                          ],
+                          "_id": "600444465b4c310015e53633",
+                          "title": "Pergunta 1",
+                          "description": "DEscricao 1",
+                          "correct": 0
+                        }
+                      ]
+                    },
+                    "_id": "600444465b4c310015e53630",
+                    "title": "Trabalho em equipe",
+                    "activities": [
+                      {
+                        "link": "",
+                        "_id": "600444465b4c310015e53632",
+                        "type": "Leitura",
+                        "activity_name": "Aula 1 - O que é uma equipe?",
+                        "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+                      },
+                      {
+                        "link": "https://youtu.be/kcBtrZPIbRs",
+                        "_id": "600444465b4c310015e53631",
+                        "type": "Videoaula",
+                        "activity_name": "Aula 2 - Como lidar em equipe?",
+                        "description": "teste teste teste test"
+                      }
+                    ],
+                    "createdAt": "2021-01-17T14:05:58.531Z",
+                    "updatedAt": "2021-01-17T14:05:58.531Z",
+                    "__v": 0
+                  }
+                ]
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "description": "Login",
+        "summary": "AuthLogin_POST",
+        "operationId": "AuthLogin_POST",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Request1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Response2"
+            },
+            "examples": {
+              "application/json": {
+                "status": 1,
+                "message": "Login Success.",
+                "data": {
+                  "_id": "600444385b4c310015e5362f",
+                  "firstName": "Teste",
+                  "lastName": "teste123",
+                  "email": "testetet@gmail.com",
+                  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDA0NDQzODViNGMzMTAwMTVlNTM2MmYiLCJmaXJzdE5hbWUiOiJUZXN0ZSIsImxhc3ROYW1lIjoidGVzdGUxMjMiLCJlbWFpbCI6InRlc3RldGV0QGdtYWlsLmNvbSIsImlhdCI6MTYxMDg5MjM0NywiZXhwIjoxNjEwOTEzOTQ3fQ.AVev8Iroaw8_88fGwzHWk62Ec5hfY_tMI-sNB86D__Y"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "description": "Register",
+        "summary": "AuthRegister_POST",
+        "operationId": "AuthRegister_POST",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Request2"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Response3"
+            },
+            "examples": {
+              "application/json": {
+                "status": 1,
+                "message": "Registration Success.",
+                "data": {
+                  "_id": "600444385b4c310015e5362f",
+                  "firstName": "Teste",
+                  "lastName": "teste123",
+                  "email": "testetet@gmail.com",
+                  "birthday_date": "23/04/1990",
+                  "location": "Guaianses, São Paulo - SP",
+                  "topic": "Investimentos"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "definitions": {
+    "Request": {
+      "title": "Request",
+      "example": {
+        "title": "Trabalho em equipe",
+        "activities": [
+          {
+            "type": "Leitura",
+            "activity_name": "Aula 1 - O que é uma equipe?",
+            "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+          },
+          {
+            "type": "Videoaula",
+            "activity_name": "Aula 2 - Como lidar em equipe?",
+            "link": "https://youtu.be/kcBtrZPIbRs",
+            "description": "teste teste teste test"
+          }
+        ],
+        "exercise": {
+          "title": "Hora de Colocar em Pratica",
+          "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+          "exercises": [
+            {
+              "title": "Pergunta 1",
+              "description": "DEscricao 1",
+              "alternatives": [
+                "Alternativa 1",
+                "Alternativa 2"
+              ],
+              "correct": 0
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "activities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Activity"
+          }
+        },
+        "exercise": {
+          "$ref": "#/definitions/Exercise"
+        }
+      },
+      "required": [
+        "title",
+        "activities",
+        "exercise"
+      ]
+    },
+    "Activity": {
+      "title": "Activity",
+      "example": {
+        "type": "Leitura",
+        "activity_name": "Aula 1 - O que é uma equipe?",
+        "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+      },
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "activity_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "activity_name",
+        "description"
+      ]
+    },
+    "Exercise": {
+      "title": "Exercise",
+      "example": {
+        "title": "Hora de Colocar em Pratica",
+        "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+        "exercises": [
+          {
+            "title": "Pergunta 1",
+            "description": "DEscricao 1",
+            "alternatives": [
+              "Alternativa 1",
+              "Alternativa 2"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "exercises": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Exercise1"
+          }
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "exercises"
+      ]
+    },
+    "Exercise1": {
+      "title": "Exercise1",
+      "example": {
+        "title": "Pergunta 1",
+        "description": "DEscricao 1",
+        "alternatives": [
+          "Alternativa 1",
+          "Alternativa 2"
+        ],
+        "correct": 0
+      },
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "correct": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "alternatives",
+        "correct"
+      ]
+    },
+    "Response": {
+      "title": "Response",
+      "example": {
+        "status": 1,
+        "message": "Book add Success.",
+        "data": {
+          "_id": "600444465b4c310015e53630",
+          "title": "Trabalho em equipe",
+          "activities": [
+            {
+              "link": "",
+              "_id": "600444465b4c310015e53632",
+              "type": "Leitura",
+              "activity_name": "Aula 1 - O que é uma equipe?",
+              "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+            },
+            {
+              "link": "https://youtu.be/kcBtrZPIbRs",
+              "_id": "600444465b4c310015e53631",
+              "type": "Videoaula",
+              "activity_name": "Aula 2 - Como lidar em equipe?",
+              "description": "teste teste teste test"
+            }
+          ],
+          "exercise": {
+            "title": "Hora de Colocar em Pratica",
+            "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+            "exercises": [
+              {
+                "alternatives": [
+                  "Alternativa 1",
+                  "Alternativa 2"
+                ],
+                "_id": "600444465b4c310015e53633",
+                "title": "Pergunta 1",
+                "description": "DEscricao 1",
+                "correct": 0
+              }
+            ]
+          }
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "example": {
+        "_id": "600444465b4c310015e53630",
+        "title": "Trabalho em equipe",
+        "activities": [
+          {
+            "link": "",
+            "_id": "600444465b4c310015e53632",
+            "type": "Leitura",
+            "activity_name": "Aula 1 - O que é uma equipe?",
+            "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+          },
+          {
+            "link": "https://youtu.be/kcBtrZPIbRs",
+            "_id": "600444465b4c310015e53631",
+            "type": "Videoaula",
+            "activity_name": "Aula 2 - Como lidar em equipe?",
+            "description": "teste teste teste test"
+          }
+        ],
+        "exercise": {
+          "title": "Hora de Colocar em Pratica",
+          "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+          "exercises": [
+            {
+              "alternatives": [
+                "Alternativa 1",
+                "Alternativa 2"
+              ],
+              "_id": "600444465b4c310015e53633",
+              "title": "Pergunta 1",
+              "description": "DEscricao 1",
+              "correct": 0
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "activities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Activity1"
+          }
+        },
+        "exercise": {
+          "$ref": "#/definitions/Exercise2"
+        }
+      },
+      "required": [
+        "_id",
+        "title",
+        "activities",
+        "exercise"
+      ]
+    },
+    "Activity1": {
+      "title": "Activity1",
+      "example": {
+        "link": "",
+        "_id": "600444465b4c310015e53632",
+        "type": "Leitura",
+        "activity_name": "Aula 1 - O que é uma equipe?",
+        "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+      },
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string"
+        },
+        "_id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "activity_name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "link",
+        "_id",
+        "type",
+        "activity_name",
+        "description"
+      ]
+    },
+    "Exercise2": {
+      "title": "Exercise2",
+      "example": {
+        "title": "Hora de Colocar em Pratica",
+        "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+        "exercises": [
+          {
+            "alternatives": [
+              "Alternativa 1",
+              "Alternativa 2"
+            ],
+            "_id": "600444465b4c310015e53633",
+            "title": "Pergunta 1",
+            "description": "DEscricao 1",
+            "correct": 0
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "exercises": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Exercise3"
+          }
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "exercises"
+      ]
+    },
+    "Exercise3": {
+      "title": "Exercise3",
+      "example": {
+        "alternatives": [
+          "Alternativa 1",
+          "Alternativa 2"
+        ],
+        "_id": "600444465b4c310015e53633",
+        "title": "Pergunta 1",
+        "description": "DEscricao 1",
+        "correct": 0
+      },
+      "type": "object",
+      "properties": {
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "correct": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "alternatives",
+        "_id",
+        "title",
+        "description",
+        "correct"
+      ]
+    },
+    "Response1": {
+      "title": "Response1",
+      "example": {
+        "status": 1,
+        "message": "Operation success",
+        "data": [
+          {
+            "exercise": {
+              "title": "Hora de Colocar em Pratica",
+              "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+              "exercises": [
+                {
+                  "alternatives": [
+                    "Alternativa 1",
+                    "Alternativa 2"
+                  ],
+                  "_id": "600444465b4c310015e53633",
+                  "title": "Pergunta 1",
+                  "description": "DEscricao 1",
+                  "correct": 0
+                }
+              ]
+            },
+            "_id": "600444465b4c310015e53630",
+            "title": "Trabalho em equipe",
+            "activities": [
+              {
+                "link": "",
+                "_id": "600444465b4c310015e53632",
+                "type": "Leitura",
+                "activity_name": "Aula 1 - O que é uma equipe?",
+                "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+              },
+              {
+                "link": "https://youtu.be/kcBtrZPIbRs",
+                "_id": "600444465b4c310015e53631",
+                "type": "Videoaula",
+                "activity_name": "Aula 2 - Como lidar em equipe?",
+                "description": "teste teste teste test"
+              }
+            ],
+            "createdAt": "2021-01-17T14:05:58.531Z",
+            "updatedAt": "2021-01-17T14:05:58.531Z",
+            "__v": 0
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Data1"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data1": {
+      "title": "Data1",
+      "example": {
+        "exercise": {
+          "title": "Hora de Colocar em Pratica",
+          "description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+          "exercises": [
+            {
+              "alternatives": [
+                "Alternativa 1",
+                "Alternativa 2"
+              ],
+              "_id": "600444465b4c310015e53633",
+              "title": "Pergunta 1",
+              "description": "DEscricao 1",
+              "correct": 0
+            }
+          ]
+        },
+        "_id": "600444465b4c310015e53630",
+        "title": "Trabalho em equipe",
+        "activities": [
+          {
+            "link": "",
+            "_id": "600444465b4c310015e53632",
+            "type": "Leitura",
+            "activity_name": "Aula 1 - O que é uma equipe?",
+            "description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+          },
+          {
+            "link": "https://youtu.be/kcBtrZPIbRs",
+            "_id": "600444465b4c310015e53631",
+            "type": "Videoaula",
+            "activity_name": "Aula 2 - Como lidar em equipe?",
+            "description": "teste teste teste test"
+          }
+        ],
+        "createdAt": "2021-01-17T14:05:58.531Z",
+        "updatedAt": "2021-01-17T14:05:58.531Z",
+        "__v": 0
+      },
+      "type": "object",
+      "properties": {
+        "exercise": {
+          "$ref": "#/definitions/Exercise2"
+        },
+        "_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "activities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Activity1"
+          }
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "__v": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "exercise",
+        "_id",
+        "title",
+        "activities",
+        "createdAt",
+        "updatedAt",
+        "__v"
+      ]
+    },
+    "Request1": {
+      "title": "Request1",
+      "example": {
+        "email": "testetet@gmail.com",
+        "password": "12345678"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    },
+    "Response2": {
+      "title": "Response2",
+      "example": {
+        "status": 1,
+        "message": "Login Success.",
+        "data": {
+          "_id": "600444385b4c310015e5362f",
+          "firstName": "Teste",
+          "lastName": "teste123",
+          "email": "testetet@gmail.com",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDA0NDQzODViNGMzMTAwMTVlNTM2MmYiLCJmaXJzdE5hbWUiOiJUZXN0ZSIsImxhc3ROYW1lIjoidGVzdGUxMjMiLCJlbWFpbCI6InRlc3RldGV0QGdtYWlsLmNvbSIsImlhdCI6MTYxMDg5MjM0NywiZXhwIjoxNjEwOTEzOTQ3fQ.AVev8Iroaw8_88fGwzHWk62Ec5hfY_tMI-sNB86D__Y"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data2"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data2": {
+      "title": "Data2",
+      "example": {
+        "_id": "600444385b4c310015e5362f",
+        "firstName": "Teste",
+        "lastName": "teste123",
+        "email": "testetet@gmail.com",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDA0NDQzODViNGMzMTAwMTVlNTM2MmYiLCJmaXJzdE5hbWUiOiJUZXN0ZSIsImxhc3ROYW1lIjoidGVzdGUxMjMiLCJlbWFpbCI6InRlc3RldGV0QGdtYWlsLmNvbSIsImlhdCI6MTYxMDg5MjM0NywiZXhwIjoxNjEwOTEzOTQ3fQ.AVev8Iroaw8_88fGwzHWk62Ec5hfY_tMI-sNB86D__Y"
+      },
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "_id",
+        "firstName",
+        "lastName",
+        "email",
+        "token"
+      ]
+    },
+    "Request2": {
+      "title": "Request2",
+      "example": {
+        "firstName": "Teste",
+        "lastName": "teste123",
+        "email": "testetet@gmail.com",
+        "password": "12345678",
+        "birthday_date": "23/04/1990",
+        "location": "Guaianses, São Paulo - SP",
+        "topic": "Investimentos"
+      },
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "birthday_date": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "password",
+        "birthday_date",
+        "location",
+        "topic"
+      ]
+    },
+    "Response3": {
+      "title": "Response3",
+      "example": {
+        "status": 1,
+        "message": "Registration Success.",
+        "data": {
+          "_id": "600444385b4c310015e5362f",
+          "firstName": "Teste",
+          "lastName": "teste123",
+          "email": "testetet@gmail.com",
+          "birthday_date": "23/04/1990",
+          "location": "Guaianses, São Paulo - SP",
+          "topic": "Investimentos"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data3"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data3": {
+      "title": "Data3",
+      "example": {
+        "_id": "600444385b4c310015e5362f",
+        "firstName": "Teste",
+        "lastName": "teste123",
+        "email": "testetet@gmail.com",
+        "birthday_date": "23/04/1990",
+        "location": "Guaianses, São Paulo - SP",
+        "topic": "Investimentos"
+      },
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "birthday_date": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "_id",
+        "firstName",
+        "lastName",
+        "email",
+        "birthday_date",
+        "location",
+        "topic"
+      ]
+    }
+  },
+  "tags": []
+}
