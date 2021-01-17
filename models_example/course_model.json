@@ -1,0 +1,28 @@
+{
+	"title": "Trabalho em equipe",
+	"activities": [
+		{
+			"type": "Leitura",
+			"activity_name": "Aula 1 - O que é uma equipe?",
+			"description": "bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla bla"
+		},
+		{
+			"type": "Videoaula",
+			"activity_name": "Aula 2 - Como lidar em equipe?",
+			"link": "https://youtu.be/kcBtrZPIbRs",
+			"description": "teste teste teste test"
+		}
+	],
+	"exercise": {
+		"title": "Hora de Colocar em Pratica",
+		"description": "Criaremos uma sala virtual com outras alunas que farão parte da sua equipe. Todas terão que cumprir tarefas, decidir quem será a líder e ao final avaliar umas as outras. Aproiveite para colocar em prática tudo o que aprendeu. Boa sorte!",
+		"exercises" : [
+			{
+				"title": "Pergunta 1",
+				"description": "DEscricao 1",
+				"alternatives": ["Alternativa 1","Alternativa 2"],
+				"correct": 0
+			}
+		]
+	}
+}
