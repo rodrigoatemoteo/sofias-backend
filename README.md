@@ -51,20 +51,25 @@ Descrição
 # :computer: Tecnologias
 Esse projeto foi feito utilizando as seguintes tecnologias:
 <details>
-  <summary>Mobile</summary>
+  <summary>Backend</summary>
 
--   [React](https://pt-br.reactjs.org/)
+-   [Nodejs](https://nodejs.org/en/download/)
 -   [Javascript](https://www.javascript.com/)
 -   [Axios](https://www.npmjs.com/package/axios)
 -   [VS Code](https://code.visualstudio.com/)
+-   [MongoDB](https://www.mongodb.com)
 
 </details>
 
 # :rocket: Funcionalidades
 
-- Funcionalidade 1.
+- Autenticação JWT.
 
-- Funcionalidade 2.
+- Cadastro MongoDB.
+
+- Rota de cursos.
+
+- [SWAGGER](https://sofias.herokuapp.com/api-docs)
 
 
 # :computer: Repositórios
@@ -73,14 +78,14 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 # :construction_worker: Como rodar
 ```bash
 # Clone o Repositório
-$ git clone https://github.com/bkkater/sofias.git
+$ git clone https://github.com/rodrigoatemoteo/sofias-backend/
 ```
 
 ### 📱 Run Project
 
 ```bash
 # Vá para a pasta sofias
-$ cd sofias
+$ cd sofias-backend
 # Instale as depedencias
 $ yarn install
 # Rode a aplicação
