@@ -15,7 +15,6 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-6CBAD9?style=for-the-badge">
 </p>
 
-Descrição
 <p>
    Sofias é uma plataforma aberta de atração de mulheres jovens que educa, forma e desenvolve competências e habilidades essenciais para o mercado do futuro. 
 
@@ -49,7 +48,7 @@ Descrição
 
 ### Mobile Screenshot
 <div style="display: flex; flex-direction: 'row';">
-   <img src="docs/images/home.png" width="360">
+   <img src="docs/images/mockup.png" width="360">
 </div>
 
 
