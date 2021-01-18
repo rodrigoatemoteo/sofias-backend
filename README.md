@@ -16,12 +16,13 @@
 </p>
 
 Descrição
-
-<div align="center">
+<p>
    Sofias é uma plataforma aberta de atração de mulheres jovens que educa, forma e desenvolve competências e habilidades essenciais para o mercado do futuro. 
 
    Nosso objetivo principal é ajudar a preencher a lacuna de gênero no mercado de trabalho e criar uma comunidade segura online e offline, capacitando, conectando e apoiando mulheres entre 15 e 25 anos que buscam qualificação profissional.
-  
+     
+</p>
+<div align="center">
   <sub>Built by
     <a>Sofias</a>
   </sub>
