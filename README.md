@@ -4,13 +4,13 @@
 
 <p align="center">	
   
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/bkkater/sofias?color=6CBAD9&style=for-the-badge">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/rodrigoatemoteo/sofias-backend?color=6CBAD9&style=for-the-badge">
 
   <a aria-label="Completed" href="https://hackathon.polinize.com/">
     <img src="https://img.shields.io/badge/Hackathon -CCR-6CBAD9?style=for-the-badge"></img>
   </a>
   <a href="https://github.com/bkkater/casa-optimize/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/bkkater/sofias?color=6CBAD9&style=for-the-badge">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rodrigoatemoteo/sofias-backend?color=6CBAD9&style=for-the-badge">
   </a> 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-6CBAD9?style=for-the-badge">
 </p>
@@ -37,7 +37,7 @@ Descrição
 
 ## 📥 Layout disponivel em:  
 <p align="center">
-    <a title=".fig Mobile" href="https://www.figma.com/file/COuTfekgKpb2bBdkCH9gVe/Casa-Optimize?node-id=0%3A1">
+    <a title=".fig Mobile" href="https://www.figma.com/file/3e0h6CswoR3MqB7VDcjGdr/Sofias?node-id=0%3A1">
         <img alt="Figma" src="https://img.shields.io/badge/Versão Web-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
     </a>
 </p>
@@ -73,7 +73,7 @@ Esse projeto foi feito utilizando as seguintes tecnologias:
 
 
 # :computer: Repositórios
--   [API](https://github.com)
+-   [Front-End](https://github.com/bkkater/sofias.git)
 
 # :construction_worker: Como rodar
 ```bash
@@ -99,6 +99,3 @@ $ yarn start
 - [Jhennifer](https://www.linkedin.com/in/jhennifer-pimentel-0518171b2/)
 - [Eduarda](https://www.linkedin.com/in/eduarda-barboza-tavares-612a55159/)
 
-# :closed_book: LICENSE
-
-Esse projeto está sobre [MIT license](./LICENSE).
