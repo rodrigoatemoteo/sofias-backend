@@ -2,6 +2,7 @@ var mongoose = require("mongoose");
 
 var CourseSchema = new mongoose.Schema({
 	title: {type: String, required: true},
+	image: {type: String, required: true},
 	activities: [{
 		type: {type: String, required: true},
 		activity_name: {type: String, required: true},
