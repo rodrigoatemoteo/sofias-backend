@@ -44,7 +44,7 @@ Descrição
 
 ### Mobile Screenshot
 <div style="display: flex; flex-direction: 'row';">
-   <img src="./.github/mockup.png" width="360">
+   <img src="docs/images/home.png" width="360">
 </div>
 
 
