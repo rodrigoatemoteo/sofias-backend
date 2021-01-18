@@ -7,7 +7,6 @@ var mongoose = require("mongoose");
 mongoose.set("useFindAndModify", false);
 
 exports.courseList = [
-	auth,
 	function (req, res) {
 		try {
 			CourseModel.find({}, function(err, courses) {
